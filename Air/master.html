@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styl.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>User role master</title>
+    <style>
+        h2 {
+            background-color: #010066;
+            color: white;
+            height: auto;
+            width: max-content;
+        }
+        
+        #demo {
+            background-color: red;
+            color: white;
+            width: 90px;
+            height: 40px;
+        }
+        
+        h5 {
+            background-color: #010066;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar open">
+        <div class="logo-details">
+            <i class='bx bxs-washer'></i>
+
+            <span class="logo_name">AWM</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Category</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bxs-user'></i>
+                        <span class="link_name">Masters</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Masters</a></li>
+                    <li>
+                        <a href="master.html">User Role Master</a>
+                    </li>
+                    <li><a href="Add user Master.html">Add User Master</a></li>
+                    <li><a href="#">User Acess Master</a></li>
+                    <li><a href="machine.html">Machine Master</a></li>
+                    <li><a href="iron.html">Iron Table Master</a></li>
+                    <li><a href="rack.html">Rack Master</a></li>
+                    <li><a href="status.html">Status Master</a></li>
+                    <li><a href="special.html">Special Instruction Master</a></li>
+                    <li><a href="service.html">special Service Master</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-shopping-bag'></i>
+                        <span class="link_name">Order Management</span>
+                    </a>
+
+                </div>
+
+                <li>
+                    <div class="profile-details">
+                        <div class="profile-content">
+                            <img src="610-6104451_image-placeholder-png-user-profile-placeholder-image-png.png" alt="profileImg">
+                        </div>
+                        <div class="name-job">
+                            <div class="profile_name"><a href="login.html">Log Out</a></div>
+
+                        </div>
+                        <i class='bx bx-log-out'></i>
+                    </div>
+                </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text"></span>
+        </div>
+    </section>
+
+
+
+    <!-- main-->
+    <div class="main">
+
+        <!--box -->
+        <!-- <div class="cardBox">
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Iron</div>
+                </div>
+                <div class="iconBx">
+                    <img src="photo_2022-03-25_14-26-07.jpg">
+
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Wash</div>
+                </div>
+                <div class="iconBx">
+                    <img src="photo_2022-03-25_14-26-05.jpg">
+
+
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Wash/Iron</div>
+                </div>
+                <div class="iconBx">
+                    <img src="photo_2022-03-25_14-26-06.jpg">
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Dry Wash</div>
+                </div>
+                <div class="iconBx">
+                    <i class='bx bxs-dryer'></i>
+
+
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Pick Up</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="file-tray-stacked-outline"></ion-icon>
+
+                </div>
+
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Delivered</div>
+                </div>
+                <div class="iconBx">
+                    <img src="photo_2022-03-25_14-26-07 (2).jpg">
+
+                </div>
+
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Machine Productivity</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="file-tray-stacked-outline"></ion-icon>
+
+                </div>
+
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Average IronTime</div>
+                </div>
+                <div class="iconBx">
+                    <i class='bx bx-time-five'></i>
+
+                </div>
+
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Average Dry Wash Time</div>
+                </div>
+                <div class="iconBx">
+                    <i class='bx bx-time-five'></i>
+
+                </div>
+
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Overall Productivity</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="file-tray-stacked-outline"></ion-icon>
+
+                </div>
+
+            </div>
+        </div>
+    </div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </hr>
+        <div>
+            <center>
+                <h2>User Role Master</h2>
+            </center>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Button trigger modal -->
+        </br><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Add
+  </button>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">User Role Description</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                    </div>
+                    <div class="modal-body">
+                        <pre>
+                        User Name: <input type="text" name="name" id="name">
+                        </br>
+                        Image:<input type="text" name="image" id="image"></br>
+                    </pre>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="send()">Save changes</button>
+                        <div id='div'>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="myForm">
+            <form method="post">
+                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <form>
+                            <div class="modal-content">
+                                <div class="modal-header" style="background-color: #0066b2; color: #FFFFFF;">
+                                    <h3 class="modal-title" id="exampleModalLabel">UPDATE USERROLE</h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: white;">&times;</span>
+                      </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="id">Id</label><input type="text" class="form-control" id="id" name="id" value="" readonly/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Name</label> <input type="text" class="form-control" id="name" name="name" required="required" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="image">Short Name</label> <input type="text" class="form-control" id="image" name="image" required="required" value="" />
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-secondary">Update
+                        Changes</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                </form>
+        </div>
+        </br>
+
+        <!-- <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+
+                </tr>
+            </thead>
+            <tbody>-->
+        <table class="table">
+
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
+
+            </tr>
+
+        </table>
+        <div id="card">
+            <!--<tr>
+                        <th scope="row">1</th>
+                        <td>Mama</td>
+                        <td>Wash</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Update</button></td>
+                        <td><button onclick="myFunction()" id="demo">Delete</button></td>
+                    </tr>-->
+        </div>
+
+
+
+        <!--<tr>
+                    <th scope="row">2</th>
+                    <td>Lucky</td>
+                    <td>Iron</td>
+                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Update</button></td>
+                    <td><button onclick="myFunction()" id="demo">Delete</button></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Ved</td>
+                    <td>Dry Wash</td>
+                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Update</button></td>
+                    <td><button onclick="myFunction()" id="demo">Delete</button></td>
+                </tr>
+            </tbody>
+          
+        </table>-->
+
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+        <script>
+            function myFunction() {
+
+                var txt;
+                if (confirm("Are You Sure?")) {
+                    txt = "Delete";
+                } else {
+                    txt = "Delete!";
+                }
+                document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
+        <script>
+            let arrow = document.querySelectorAll(".arrow");
+            for (var i = 0; i < arrow.length; i++) {
+                arrow[i].addEventListener("click", (e) => {
+                    let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+                    arrowParent.classList.toggle("showMenu");
+                });
+            }
+
+            let sidebar = document.querySelector(".sidebar");
+            let sidebarBtn = document.querySelector(".bx-menu");
+            console.log(sidebarBtn);
+            sidebarBtn.addEventListener("click", () => {
+                sidebar.classList.toggle("close");
+            });
+        </script>
+        <script src="as.js"></script>
+        <script src="main.js"></script>
+
+        <script>
+            function readFormSubmit() {
+                var ItemJSON = {};
+                ItemJSON["name"] = document.getElementById("name").value;
+                ItemJSON["image"] = document.getElementById("image").value;
+                return ItemJSON;
+            }
+
+            function updateform() {
+                var uid = document.getElementById("idd").value
+                alert(uid);
+                var ItemJSON = {};
+                ItemJSON["id"] = document.getElementById("idd").value;
+                ItemJSON["name"] = document.getElementById("upname").value;
+                ItemJSON["image"] = document.getElementById("upimage").value;
+                return ItemJSON;
+            }
+
+
+            function UpdateData() {
+                var upDate = updateform();
+                var upJson = JSON.stringify(upDate);
+                URL = "http://164.52.212.42:8085/as-admin/admin/updateUserRole"; //your url
+
+                var upHttp = new XMLHttpRequest();
+
+                upHttp.onreadystatechange = callbackFunction(upHttp);
+                upHttp.open("PUT", URL, false);
+                upHttp.setRequestHeader("Content-Type", "application/json");
+
+                upHttp.send(upJson);
+                alert(upHttp.responseText);
+
+
+            }
+
+            function send() {
+                var urlvariable;
+
+                urlvariable = "text";
+
+                //var ItemJSON = {};
+                var formData = readFormSubmit();
+                var jsonData = JSON.stringify(formData);
+                //var name;
+                //var name = document.getElementById("name").value;
+                //var image = document.getElementById("image").value;
+
+                //ItemJSON = '{"name": "bhhh","image": "raju"}';
+                // ItemJSON["name"] = document.getElementById("name").value;
+                //ItemJSON["image"] = document.getElementById("image").value;
+                URL = "http://164.52.212.42:8085/as-admin/admin/saveUserRole"; //Your URL
+
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
+                xmlhttp.open("POST", URL, false);
+                xmlhttp.setRequestHeader("Content-Type", "application/json");
+                //xmlhttp.setRequestHeader('Authorization', 'Basic ' + window.btoa('apiusername:apiuserpassword')); //in prod, you should encrypt user name and password and provide encrypted keys here instead 
+                xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
+                xmlhttp.send(jsonData);
+                alert(xmlhttp.responseText);
+                //document.getElementById("div").innerHTML = xmlhttp.statusText + ":" + xmlhttp.status + "<BR><textarea rows='100' cols='100'>" + xmlhttp.responseText + "</textarea>";
+            }
+
+            function callbackFunction(xmlhttp) {
+                //alert(xmlhttp.responseXML);
+            }
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

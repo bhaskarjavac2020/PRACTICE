@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styl.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #f7f7f7;
+        }
+        
+        .form-box {
+            max-width: 500px;
+            margin: auto;
+            padding: 50px;
+            background: #f2f2f2;
+            border: 10px solid #f2f2f2;
+        }
+        
+        h1,
+        p {
+            text-align: center;
+        }
+        
+        input,
+        textarea {
+            width: 100%;
+        }
+        
+        #col {
+            background-color: blue;
+            color: white;
+            height: auto;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar open">
+        <div class="logo-details">
+            <i class='bx bxs-washer'></i>
+
+            <span class="logo_name">AWM</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Category</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bxs-user'></i>
+                        <span class="link_name">Masters</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Masters</a></li>
+                    <li>
+                        <a href="master.html">User Role Master</a>
+                    </li>
+                    <li><a href="Add user Master.html">Add User Master</a></li>
+                    <li><a href="#">User Acess Master</a></li>
+                    <li><a href="machine.html">Machine Master</a></li>
+                    <li><a href="iron.html">Iron Table Master</a></li>
+                    <li><a href="rack.html">Rack Master</a></li>
+                    <li><a href="status.html">Status Master</a></li>
+                    <li><a href="special.html">Special Instruction Master</a></li>
+                    <li><a href="service.html">special Service Master</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-shopping-bag'></i>
+                        <span class="link_name">Order Management</span>
+                    </a>
+
+                </div>
+
+                <li>
+                    <div class="profile-details">
+                        <div class="profile-content">
+                            <img src="610-6104451_image-placeholder-png-user-profile-placeholder-image-png.png" alt="profileImg">
+                        </div>
+                        <div class="name-job">
+                            <div class="profile_name"><a href="login.html">Log Out</a></div>
+
+                        </div>
+                        <i class='bx bx-log-out'></i>
+                    </div>
+                </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text"></span>
+        </div>
+    </section>
+
+    <!-- main-->
+    <div class="main">
+
+        <!--box -->
+        <!-- <div class="cardBox">
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Iron</div>
+                </div>
+                <div class="iconBx">
+                    <img src="photo_2022-03-25_14-26-07.jpg">
+
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Wash</div>
+                </div>
+                <div class="iconBx">
+                    <img src="photo_2022-03-25_14-26-05.jpg">
+
+
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Wash/Iron</div>
+                </div>
+                <div class="iconBx">
+                    <img src="photo_2022-03-25_14-26-06.jpg">
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Dry Wash</div>
+                </div>
+                <div class="iconBx">
+                    <i class='bx bxs-dryer'></i>
+
+
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Pick Up</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="file-tray-stacked-outline"></ion-icon>
+
+                </div>
+
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Delivered</div>
+                </div>
+                <div class="iconBx">
+                    <img src="photo_2022-03-25_14-26-07 (2).jpg">
+
+                </div>
+
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Machine Productivity</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="file-tray-stacked-outline"></ion-icon>
+
+                </div>
+
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Average IronTime</div>
+                </div>
+                <div class="iconBx">
+                    <i class='bx bx-time-five'></i>
+
+                </div>
+
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Average Dry Wash Time</div>
+                </div>
+                <div class="iconBx">
+                    <i class='bx bx-time-five'></i>
+
+                </div>
+
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">100</div>
+                    <div class="cardName">Overall Productivity</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="file-tray-stacked-outline"></ion-icon>
+
+                </div>
+
+            </div>
+        </div>
+    </div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </br>
+        </br>
+        </br>
+        </br>
+        <div class="form-box">
+            <h1>Status Master</h1>
+            </br>
+
+            <form method="post">
+                <div class="form-group">
+                    <label for="id">Status Id</label>
+                    <input class="form-control" id="status name" type="text" name=" status Name">
+                    <label for="id">Name</label>
+                    <input class="form-control" id="name" type="text" name="Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Description </label>
+                    <textarea></textarea>
+
+
+
+
+
+
+
+
+                    </br>
+                    </br>
+                    <!--<label class="col-md-4 control-label">Department / Office</label>-->
+
+
+                    <input id="col" class="btn btn-primary" type="submit" value="Submit" />
+                </div>
+            </form>
+
+        </div>
+        </br>
+        </br>
+        <!-- <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+
+        </tr>
+                </thead>
+                <tbody>-->
+        <table class="table" , style="width: 100%;">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+
+                </tr>
+
+            </thead>
+
+        </table>
+
+        <div id="card">
+            <!--<tr>
+                                <th scope="row">1</th>
+                                <td>Mama</td>
+                                <td>Wash</td>
+                                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Update</button></td>
+                                <td><button onclick="myFunction()" id="demo">Delete</button></td>
+                </tr>-->
+        </div>
+
+        <!--<tr>
+                            <th scope="row">2</th>
+                            <td>Lucky</td>
+                            <td>Iron</td>
+                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Update</button></td>
+                            <td><button onclick="myFunction()" id="demo">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Ved</td>
+                            <td>Dry Wash</td>
+                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Update</button></td>
+                            <td><button onclick="myFunction()" id="demo">Delete</button></td>
+                        </tr>
+                    </tbody>
+                  
+                </table>-->
+
+
+
+
+
+
+        <script>
+            let arrow = document.querySelectorAll(".arrow");
+            for (var i = 0; i < arrow.length; i++) {
+                arrow[i].addEventListener("click", (e) => {
+                    let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+                    arrowParent.classList.toggle("showMenu");
+                });
+            }
+
+            let sidebar = document.querySelector(".sidebar");
+            let sidebarBtn = document.querySelector(".bx-menu");
+            console.log(sidebarBtn);
+            sidebarBtn.addEventListener("click", () => {
+                sidebar.classList.toggle("close");
+            });
+        </script>
+        <script src="statusapi.js"></script>
+
+
+
+
+
+</body>
+
+</html>

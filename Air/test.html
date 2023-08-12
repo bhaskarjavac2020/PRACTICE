@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>User</title>
+</head>
+
+<body>
+    <form>
+        <div class="formBox">
+            <label for="name">name</label>
+            <input type="text" id="name" placeholder="name">
+        </div>
+        <div class="form-box">
+            <label for="image">image</label>
+            <input type="text" id="image" placeholder="image">
+        </div>
+        <div class="form-box">
+            <button id="btn" onclick="send()">click to add</button>
+        </div>
+    </form>
+    <script type="text/javascript" language="javascript">
+        function send() {
+            var urlvariable;
+
+            urlvariable = "text";
+
+            let ItemJSON;
+            var names = document.getElementById("name");
+            var images = document.getElementById("image");
+
+            ItemJSON = {
+                name: names,
+                image: images
+            }
+
+            URL = "http://164.52.212.42:8085/as-admin/admin/saveUserRole"; //Your URL
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
+            xmlhttp.open("POST", URL, false);
+            xmlhttp.setRequestHeader("Content-Type", "application/json");
+            xmlhttp.setRequestHeader('Authorization', 'Basic ' + window.btoa('apiusername:apiuserpassword')); //in prod, you should encrypt user name and password and provide encrypted keys here instead 
+            xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
+            xmlhttp.send(ItemJSON);
+            alert(xmlhttp.responseText);
+            document.getElementById("div").innerHTML = xmlhttp.statusText + ":" + xmlhttp.status + "<BR><textarea rows='100' cols='100'>" + xmlhttp.responseText + "</textarea>";
+        }
+
+        function callbackFunction(xmlhttp) {
+            //alert(xmlhttp.responseXML);
+        }
+    </script>
+</body>
+
+</html>

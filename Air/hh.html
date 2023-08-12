@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+    <script type="text/javascript" language="javascript">
+        function send() {
+            var urlvariable;
+
+            urlvariable = "text";
+
+            var ItemJSON;
+            var name = document.getElementById("name");
+            var image = document.getElementById("image");
+
+            ItemJSON = '{"name": "bhhh","image": "raju"}';
+
+            URL = "http://164.52.212.42:8085/as-admin/admin/saveUserRole"; //Your URL
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
+            xmlhttp.open("POST", URL, false);
+            xmlhttp.setRequestHeader("Content-Type", "application/json");
+            xmlhttp.setRequestHeader('Authorization', 'Basic ' + window.btoa('apiusername:apiuserpassword')); //in prod, you should encrypt user name and password and provide encrypted keys here instead 
+            xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
+            xmlhttp.send(ItemJSON);
+            alert(xmlhttp.responseText);
+            document.getElementById("div").innerHTML = xmlhttp.statusText + ":" + xmlhttp.status + "<BR><textarea rows='100' cols='100'>" + xmlhttp.responseText + "</textarea>";
+        }
+
+        function callbackFunction(xmlhttp) {
+            //alert(xmlhttp.responseXML);
+        }
+    </script>
+</head>
+
+
+
+
+<body id='bod'><button type="submit" onclick="javascript:send()">call</button>
+    <div id='div'>
+
+    </div>
+
+</body>
+
+</html>
